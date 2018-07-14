@@ -2574,6 +2574,9 @@ def GalankBot(op):
                         for mention in mentionees:
                             if GalankMID in mention["M"]:
                               if settings["detectMention"] == True:
+				contact = Galank.getContact(op.param2)
+            			 image = "http://dl.profile.line.naver.jp/" + contact.pictureStatus
+            			 Galank.sendImageWithURL(op.param1,image)
                                  sendMention(receiver, sender, "", " \nGalank Hadir BossQ!! ")
 
         if op.type == 17:
